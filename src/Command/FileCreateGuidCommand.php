@@ -54,10 +54,6 @@ class FileCreateGuidCommand extends Command
 
     private function getGuidsFromFolderStructure(string $currentPath, array &$guids, ProgressBar $progressBar, int $level = 0)
     {
-        if(count($guids) >= 100){
-            return;
-        }
-
         $items = scandir($currentPath);
 
         if($level === 0){
